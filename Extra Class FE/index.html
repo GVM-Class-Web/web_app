@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>McDonald&#39;s: Burgers, Fries &amp; More. Quality Ingredients.</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Eater'	rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Bilbo' rel='stylesheet'>
+
+	<link rel="shortcut icon" type="text/css" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1u58vrE4_JXhx62ddIhvzLqNLsJhwH9rBcN4ra8KChforoEU_">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="header" id="header">
+		<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/2000px-McDonald%27s_Golden_Arches.svg.png" height="50" width="50">
+		<div class="tulisan">McDonald's</div>
+			<ul>
+				<li><a href="#" onclick="return false;" onmousedown="resetScroller('home');" >Home</a></li>
+				<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('menu');resetScroller('menu');" >Menu</a></li>
+				<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('about');
+				resetScroller('about');"> About </a></li>
+				<li><a href="#" onclick="return false;" onmousedown="autoScrollTo('feedback');" >FeedBack</a></li>
+			</ul>
+	</div>
+	<div class="img-slide" id="home">
+	    	<div class="arrow" id="arrow-left"></div>
+	    	<div class="img-slider">
+		        <div class="img-slider-container" id="img1">
+		        </div>
+		        <div class="img-slider-container" id="img2">
+		        </div>
+		        <div class="img-slider-container" id="img3">
+		        </div>
+	    	</div>
+		    <div class="arrow" id="arrow-right">
+		    </div>
+	    </div>
+
+	    <script>
+      let sliderImage = document.querySelectorAll('.img-slider-container'),
+          arrowRight = document.querySelector('#arrow-right'),
+          arrowLeft = document.querySelector('#arrow-left'),
+          current = 0;
+
+      function reset(){
+        for (var i = 0; i < sliderImage.length; i++) {
+            sliderImage[i].style.display = 'none';
+           }
+      }
+
+      function startSlide(){
+        reset();
+        sliderImage[0].style.display = 'block';
+      }
+
+      function slideLeft(){
+        reset();
+        sliderImage[current - 1].style.display = 'block';
+        current--;
+      }
+
+      arrowLeft.addEventListener('click', function(){
+        if(current == 0){
+          current = sliderImage.length;
+        }
+          slideLeft();
+      })
+
+      function slideRight(){
+        reset();
+        sliderImage[current + 1].style.display = 'block';
+        current++;
+      }
+
+      arrowRight.addEventListener('click', function(){
+        if(current == sliderImage.length -1){
+          current = -1;
+        }
+          slideRight();
+      })
+
+      startSlide();
+    </script>	
+
+	<div class="image" id="menu">
+		<div class="row_atas">
+				<img id="picture1" class="picture1" src="http://static.republika.co.id/uploads/images/inpicture_slide/mcdonald-s-hadirkan-menu-baru-paket-ayam-kremes-sambal-uleg-_170602131100-264.jpg" height="250" width="300">
+				<img id="picture2" class="picture1" src="http://cdn2.tstatic.net/jatim/foto/bank/images/nasi-ayam-kremes-sambel-uleg-menu-mc-donalds_20170530_081813.jpg" height="250" width="300">
+				<img id="picture3" class="picture1" src="https://cfcdn2.azsg.opensnap.com/azsg/snapphoto/photo/LG/GY2T/3CIC3RBB687C0CCBA09AEAlv.jpg" height="250" width="300">
+			</div>
+			<div class="row_bawah">
+				<img id="picture4" class="picture1" src="https://assets3.thrillist.com/v1/image/1887873/size/tmg-article_default_mobile.jpg" height="250" width="300">
+				<img id="picture5" class="picture1" src="https://amp.businessinsider.com/images/57617a87910584145c8c90d6-750-563.jpg" height="250" width="300">
+				<img id="picture6" class="picture1" src="http://ksassets.timeincuk.net/wp/uploads/sites/55/2018/02/Special-Big-Macs.jpg" height="250" width="300">
+			</div>
+	</div>	
+
+
+	<!-- Buat popupnya duluuu -->
+<div class="allpopup">
+	<div class="popup" id="popup1">
+		<div class="isinya" id="isinya">
+			<div class="close_location">
+				<span class="close" id="close1">&times;</span>
+			</div>
+			<iframe id="video" width="660" height="415" src="https://www.youtube.com/embed/2_E4k8Ag8GA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="popup" id="popup2">
+		<div class="isinya">
+			<div class="close_location">
+				<span class="close" id="close2">&times;</span>
+			</div>
+			<img class="img_popup" src="http://cdn2.tstatic.net/jatim/foto/bank/images/nasi-ayam-kremes-sambel-uleg-menu-mc-donalds_20170530_081813.jpg">
+		</div>
+	</div>
+	<div class="popup" id="popup3">
+		<div class="isinya">
+			<div class="close_location">
+				<span class="close" id="close3">&times;</span>
+			</div>
+			<img class="img_popup" src="https://cfcdn2.azsg.opensnap.com/azsg/snapphoto/photo/LG/GY2T/3CIC3RBB687C0CCBA09AEAlv.jpg">
+		</div>
+	</div>
+	<div class="popup" id="popup4">
+		<div class="isinya">
+			<div class="close_location">
+				<span class="close" id="close4">&times;</span>
+			</div>
+			<img class="img_popup" src="https://assets3.thrillist.com/v1/image/1887873/size/tmg-article_default_mobile.jpg">
+		</div>
+	</div>
+	<div class="popup" id="popup5">
+		<div class="isinya">
+			<div class="close_location">
+				<span class="close" id="close5">&times;</span>
+			</div>
+			<img class="img_popup" src="https://amp.businessinsider.com/images/57617a87910584145c8c90d6-750-563.jpg" >
+		</div>
+	</div>
+	<div class="popup" id="popup6">
+		<div class="isinya">
+			<div class="close_location">
+				<span class="close" id="close6">&times;</span>
+			</div>
+			<img class="img_popup" src="http://ksassets.timeincuk.net/wp/uploads/sites/55/2018/02/Special-Big-Macs.jpg">
+		</div>
+	</div>
+</div>
+
+	<div class="about" id="about">
+		<div class="about1">
+			ABOUT US
+		</div>
+		<div class="about_desc">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. 
+		</div>
+		<div class="desc">
+				<img class="pic1" src="https://www.mcdonalds.com/content/dam/usa/promotions/desktop/about-us_our-history_960x542.jpg" height="400px" width="49%">
+				<div class="h1title">
+					<div class="judul_desc">Our Story</div>
+					<div class="h2_desc">
+						See how far we've come and how we got to now.	
+					</div>
+					<div class="link">
+						<a href="">Learn More!</a>
+					</div>
+				</div>	
+				
+				<img class="pic2" src="https://www.mcdonalds.com/content/dam/usa/promotions/desktop/about-us_leadership-team_960x542.jpg" height="400px" width="49%">
+				<div class="h2title">
+				<div class="judul_desc">Franchise Info</div>
+				<div class="h2_desc">
+					Learn about owner operator opportunities.
+				</div>
+				<div class="link">
+					<a href="">Learn More!</a>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<div class="myForm" id="feedback">
+		<div class ="form1">
+				<form class = "form" id = "form" name="form"><label>Nama :</label>
+					<input type="text" id = "name" name="nama"></input>
+					<label>Email :</label>
+					<input type="text" id = "email" name="email"></input>
+					<label>Feedback	:</label> 
+					<textarea rows ="8" cols = "40" id = "feedback"></textarea>
+					<input type="submit" name="submit" value="Submit" id = "submit">
+				</form>
+		</div>
+		<div class ="gif">
+				<p class = "message">THANK YOU FOR YOUR ORDER :)</p>
+				<img src="mcdonald.gif" class = "gifImage">
+		</div>
+	</div>
+
+	
+		<div class="footer1">
+			<address style="font-size: 16px;"><b>Contact Us!</b><br>
+			<a href="mailto:Mcdonald@indonesia.com">Mcdonald@indonesia.com</a><br>
+				Phone: 14045
+			</address>
+		</div>
+		<div class="footer2">
+			<a href="https://twitter.com/mcdonalds_id" target="_blank"><img class="sosmed" src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png"></a>
+			<a href="https://www.facebook.com/McDonaldsID/?brand_redir=10150097174480584" target="_blank"><img class="sosmed" src="https://interior-stickers.ru/38064-thickbox_default/znak-facebook.jpg"></a>
+			<a href="https://www.instagram.com/mcdonalds/" target="_blank"><img class="sosmed" src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png"></a>
+			<a href="https://www.youtube.com/" target="_blank"><img class="sosmed" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png"></a>
+		</div>
+	
+
+	
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+
+
+</html>
