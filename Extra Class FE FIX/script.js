@@ -1,17 +1,34 @@
 var marginY = 0;
 // var destination = 0;
 var distance = 40;
-var speed=50;
+var speed=35;
 // var scroller =null;
+var onrunning  = false;
 
+
+function controller(e){
+	if(!onrunning){
+		onrunning = true;
+		if(e == 'home'){
+			resetScroller(e);
+		}else if(e == 'feedback'){
+			autoScrollTo(e);
+		}else{
+			autoScrollTo(e);
+			resetScroller(e);
+		};
+	}
+}
 // Buat scroll kebawah
 function autoScrollTo(el){
+	onrunning = true;
 	var currentY = window.pageYOffset;
 	var targetY = document.getElementById(el).offsetTop;
 	 var bodyHeight = document.body.offsetHeight;
 	 var yPos = currentY + innerHeight;
-	 var animator = setTimeout('autoScrollTo("'+el+'")',50);
+	 var animator = setTimeout('autoScrollTo("'+el+'")',35);
 	 if(yPos > bodyHeight){
+		 onrunning = false;
 	 	clearTimeout(animator);
 	 }
 	 else{
@@ -19,13 +36,15 @@ function autoScrollTo(el){
 	 		scrollY = currentY+distance;
 	 		window.scroll(0, scrollY);
 	 	}else{
+			onrunning = false;
 	 		clearTimeout(animator);
 	 	}
 	 }
-	 event.preventDefault();
+	 console.log(onrunning);
 }
 //buat scroll ke atas pas home di klik
 function resetScroller(el){
+	onrunning = true;
 	var currentY = window.pageYOffset;
     var targetY = document.getElementById(el).offsetTop;
 	var animator = setTimeout('resetScroller(\''+el+'\')',speed);
@@ -33,12 +52,17 @@ function resetScroller(el){
 		scrollY = currentY-distance;
 		window.scroll(0, scrollY);
 	} else {
+		onrunning = false;
 		clearTimeout(animator);
 	}
+	 console.log(onrunning);
 }
 
 
 // javaScript buat munculin gambar
+
+
+
 
 let menu1 = document.getElementById('picture1');
 let menu2 = document.getElementById('picture2');
@@ -75,13 +99,12 @@ menu6.onclick = function(){
 
 // harus di panggil duluu
 // khusus span1 click black window juga ilangs
-var span1 = document.getElementById("isinya");
-
-var span2 = document.getElementById("close2");
-var span3 = document.getElementById("close3");
-var span4 = document.getElementById("close4");
-var span5 = document.getElementById("close5");
-var span6 = document.getElementById("close6");
+var span1 = document.getElementById("isinya1");
+var span2 = document.getElementById("isinya2");
+var span3 = document.getElementById("isinya3");
+var span4 = document.getElementById("isinya4");
+var span5 = document.getElementById("isinya5");
+var span6 = document.getElementById("isinya6");
 
 
 // Ketika di klik gambar pop up nya tutup
@@ -89,11 +112,6 @@ span1.onclick = function(){
 	popup1.style.display="none";
 	// dipanggil disini jadi kalo span1 di click stop dia videonya
 	stop();
-}	
-//Stop the video 
-function stop(){
-	var iframe = document.getElementById("video");
-	iframe.src = iframe.src;
 }
 
 span2.onclick =  function(){
@@ -110,6 +128,12 @@ span5.onclick =  function(){
 }
 span6.onclick =  function(){
 	popup6.style.display="none";
+}
+
+//Stop the video
+function stop(){
+	var iframe = document.getElementById("video");
+	iframe.src = iframe.src;
 }
 
 //Validasi input keluhan
@@ -143,5 +167,5 @@ submit.onclick = function(){
 	}
 	alert("Thank you for the feedback :D")
 	return true;
-	
+
 }
