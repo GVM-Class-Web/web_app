@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#000000">
+    <link href="favicon.png" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../webpractice/assets/css/style.css?v=20180405-">
+    <title>Web Practice - Yudha</title>
+</head>
+<body>
+    <div class="wraps" id="wrapContent">
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="selected s1" href="javascript:void(0)" id="nav1" onclick="scrollToPage('home')">Home</a>
+                    </li><li class="desktop">
+                        <a class="" href="javascript:void(0)" id="nav2" onclick="scrollToPage('page1')">Page 1</a>
+                    </li><li class="desktop">
+                        <a class="" href="javascript:void(0)" id="nav3" onclick="scrollToPage('page2')">Page 2</a>
+                    </li><li class="desktop">
+                        <a class="" href="javascript:void(0)" id="nav4" onclick="scrollToPage('page3')">Page 3</a>
+                    </li><li class="desktop">
+                        <a class="link-active" href="javascript:void(0)" onclick="closeLeft()">Endless<br>Scrolling</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menuList" onclick="showHideMenu()"><img src="/webpractice/assets/images/list.svg" alt="list"></div>
+            <div class="menuContent" id="menu">
+                <div><a class="" href="javascript:void(0)" onclick="scrollToPage('page1')">Page 1</a></div>
+                <div><a class="" href="javascript:void(0)" onclick="scrollToPage('page2')">Page 2</a></div>
+                <div><a class="" href="javascript:void(0)" onclick="scrollToPage('page3')">Page 3</a></div>
+                <div><a class="" href="javascript:void(0)" onclick="closeLeft()">Endless Scrolling</a></div>
+            </div>
+        </header>
+        <div class="scrolling-box ads0" id="contents" onscroll="setTabs()">
+            <section id="home">
+                <div class="slides-container">
+                    <div id="slides" class="slides show0">
+                        <div class="slide s1"></div><div class="slide s2"></div><div class="slide s3"></div>
+                    </div>
+                    <div id="nav-slide" class="" onclick="playOrPause()">Play</div>
+                    <div id="nav-number-slide" class="">
+                        <div id="s0" class="number-slide selected" onclick="goToSlidePause(0)">1</div>
+                        <div id="s1" class="number-slide" onclick="goToSlidePause(1)">2</div>
+                        <div id="s2" class="number-slide" onclick="goToSlidePause(2)">3</div>
+                    </div>
+                </div>
+            </section>
+			<section class="ads"></section>
+            <section id="page1">
+                <div>
+                    <h1>Page 1</h1>
+                </div>
+            </section>
+			<section class="ads"></section>
+            <section id="page2">
+                <div>
+                    <h1>Page 2</h1>
+                </div>
+            </section>
+			<section class="ads"></section>
+            <section id="page3">
+                <div>
+                    <h1>Page 3</h1>
+                </div>
+            </section>
+            <section class="ads-last"></section>
+            <section class="footer" id="footer">&copy; Copyright 2018 - Yudha</section>
+        </div>
+    </div>
+    <script src="../webpractice/assets/js/app.js?v=20180405-1"></script>
+</body>
+</html>
