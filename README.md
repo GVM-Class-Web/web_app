@@ -8,6 +8,3 @@
 
 Online Demo
   * Click <a href="https://yudha-e.github.io/webpractice/">here</a> for preview
-
-From command line:
-  * `git clone `
