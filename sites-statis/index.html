@@ -16,16 +16,16 @@
 			<div class="wrap-logo">
 				<div class="logo">
 					<a href="#">
-						<img src="img/aiven-logo.png">
+						<img src="img/logo.png">
 					</a>	
 				</div>
 			</div>
 			<nav class="wrap-menu">
 				<ul class="menu">
-					<li><p id="click-sec1">Home</p></a></li>
-					<li><p id="click-sec2">About</p></a></li>
-					<li><p id="click-sec3">Profile</p></li>
-					<li><p id="click-sec4">Contact</p></a></li>
+					<li><p class="clickSec" id="click-sec1">Home</p></a></li>
+					<li><p class="clickSec" id="click-sec2">About</p></a></li>
+					<li><p class="clickSec" id="click-sec3">Profile</p></li>
+					<li><p class="clickSec" id="click-sec4">Contact</p></a></li>
 				</ul>
 			</nav>
 		</div>
@@ -36,18 +36,22 @@
 		<!-- section content 1 -->
 		<div class="section" id="sec-1">
 		<div class="slideshow-container">
-				<div class="mySlides fade">
-				  <img src="img/back-image-(3).jpg" id="img-slide">
+				<div class="mySlides fade-none">
+				  <img src="img/back-image-3.jpg" id="img-slide">
 				</div>
-				<div class="mySlides fade">
-				  <img src="img/back-image-(1).jpg" id="img-slide">
+				<div class="mySlides fade-none">
+				  <img src="img/back-image-1.jpg" id="img-slide">
 				</div>
-				<div class="mySlides fade">
-				  <img src="img/back-image-(2).jpg" id="img-slide">
+				<div class="mySlides fade-none">
+				  <img src="img/back-image-2.jpg" id="img-slide">
 				</div>
 				<div style="padding-left: 20px; padding-right: 20px;">
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					<div onclick="plusSlides(-1)">
+						<a class="prev">&#10094;</a>
+					</div>					
+					<div onclick="plusSlides(1)">
+						<a class="next" >&#10095;</a>
+					</div>
 				</div>
 				
 				<div style="text-align:center; position: relative; bottom: 40px;">
@@ -57,101 +61,63 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- section content 2 -->
 		<div class="section" id="sec-2">
-
+			<div class="content-center">
+				<h2 class="font-roboto brown">ABOUT</h2>
+			</div>
 
 		</div>
-
 		<!-- section content 3 -->
 		<div class="section" id="sec-3">
-			<div class="sec-grid" id="sec-grid-1">
-				<img src="img/image-1.jpg">
-			</div>
-			<div class="sec-grid" id="sec-grid-2">
-				<img src="img/image-2.jpg">
-			</div>
-			<div class="sec-grid" id="sec-grid-3">
-				<img src="img/image-3.jpg">
-			</div>
-			<div class="sec-grid" id="sec-grid-4">
-				<img src="img/image-4.jpg">
+			<h2 class="font-roboto white">PROFILE</h2>
+			<hr class="divide-sm">
+			<div class="section-grid-content">
+				<div class="sec-grid" id="sec-grid-1">
+					<img src="img/image-1.jpg">
+				</div>
+				<div class="sec-grid" id="sec-grid-2">
+					<img src="img/image-2.jpg">
+				</div>
+				<div class="sec-grid" id="sec-grid-3">
+					<img src="img/image-3.jpg">
+				</div>
+				<div class="sec-grid" id="sec-grid-4">
+					<img src="img/image-4.jpg">
+				</div>
 			</div>
 
 			<!-- content show modal -->
 			<div class="modal" id="modal-wrap">	
 				<div class="modal-content">
 					<span class="close">&times;</span>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div style="width: 100%; height: 100%;">
+						<iframe style="width: 100%; height: 100%; margin-top: -30px;" src="https://www.youtube.com/embed/m1a62H2M5hw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"></iframe>
+					</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- section content 4 -->
 		<div class="section" id="sec-4">
-			<div class="row">
-				<div class="span3 ">
-					<div class="album clogs">
-						<div class="cover">
-							<a href="#" class="play-button"><span>Play</span></a>
-						</div>
-						<div class="record"></div>
-						<div class="name">Last Song</div>
-						<div class="byline">Clogs</div>
+			<form action="" method="POST" onsubmit="" name="contact" id="contact">
+				<div class="section-contact content-center">
+					<h2 class="font-roboto sand">CONTACT US</h2>
+					<input type="text" name="name-user" class="border-rad" placeholder="Nama" oninvalid="this.setCustomValidity('Please Enter Valid Name')" oninput="setCustomValidity('')" required>
+					<hr class="divide-sm">
+					<input type="email" name="email-user" class="border-rad" placeholder="Email" oninvalid="this.setCustomValidity('Please Enter Valid Email')" oninput="setCustomValidity('')" required>
+					<hr class="divide-sm">
+					<input type="text" name="nohp-user" class="border-rad" placeholder="Handphone Number" oninvalid="this.setCustomValidity('Please Enter Valid Handphone Number')" oninput="setCustomValidity('')" required>
+					<hr class="divide-sm">
+					<textarea name="desc-user" placeholder="Description"  oninvalid="this.setCustomValidity('Please Enter Valid Description')" oninput="setCustomValidity('')" required></textarea>
+					<hr class="divide-sm">
+					<div>
+						<!-- <div class="btn-sml button sand-back"><a href="#" class="font-roboto font-15 white">Kirim</a></div> -->
+						<input class="btn-sml button sand-back font-roboto white" type="submit" value="Kirim">
 					</div>
 				</div>
-				<div class="span3 ">
-					<div class="album gallows">
-						<div class="cover">
-							<a href="#" class="play-button"><span>Play</span></a>
-						</div>
-						<div class="record"></div>
-						<div class="name">Belly of the Sharks</div>
-						<div class="byline">Gallows</div>
-					</div>
-				</div>
-				<div class="span3 ">
-					<div class="album vhs">
-						<div class="cover">
-							<a href="#" class="play-button"><span>Play</span></a>
-						</div>
-						<div class="record"></div>
-						<div class="name">Bring on the Comets</div>
-						<div class="byline">VHS or Beta</div>
-					</div>
-				</div>
-				<div class="span3 ">
-					<div class="album apparat">
-						<div class="cover">
-							<a href="#" class="play-button"><span>Play</span></a>
-						</div>
-						<div class="record"></div>
-						<div class="name">Song of Los</div>
-						<div class="byline">Apparat</div>
-					</div>
-				</div>
-			</div>
-
+			</form>
 		</div>
-
 	</div>
-	<!--
-	<footer class="footer" id="footer">
-		<ul class="wrap-footer">
-			<li><a href="#sec-1"><p>Home</p></a></li>
-			<li><a href="#sec-2"><p>About</p></a></li>
-			<li><a href="#sec-3"><p>Profile</p></a></li>
-			<li><a href="#sec-4"><p>Contact</p></a></li>
-		</ul>
-		<div class="tagline">©Copyright Alright Reserved - 2018</div>
-	</footer> 
-	-->
  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
