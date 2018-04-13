@@ -65,15 +65,20 @@
 		<div class="section" id="sec-2">
 			<div class="content-center">
 				<h2 class="font-roboto brown">ABOUT</h2>
+				<div class="content-search-youtube">
+					<input class="border-rad" placeholder="Search" type="search" id="query-youtube" onsearch="searching()" onfocus="clearElement()">
+					<!-- <button onclick="searching()" class="btn-sml button">Search</button> -->
+				</div>
+				<div id="response-youtube">
+				</div>
 			</div>
-
 		</div>
 		<!-- section content 3 -->
 		<div class="section" id="sec-3">
 			<h2 class="font-roboto white">PROFILE</h2>
 			<hr class="divide-sm">
-			<div class="section-grid-content">
-				<div class="sec-grid" id="sec-grid-1">
+			<div id="section-grid-content">
+				<!--<div class="sec-grid" id="sec-grid-1">
 					<img src="img/image-1.jpg">
 				</div>
 				<div class="sec-grid" id="sec-grid-2">
@@ -84,15 +89,14 @@
 				</div>
 				<div class="sec-grid" id="sec-grid-4">
 					<img src="img/image-4.jpg">
-				</div>
+				</div> -->
 			</div>
-
 			<!-- content show modal -->
 			<div class="modal" id="modal-wrap">	
 				<div class="modal-content">
 					<span class="close">&times;</span>
 					<div style="width: 100%; height: 100%;">
-						<iframe style="width: 100%; height: 100%; margin-top: -30px;" src="https://www.youtube.com/embed/m1a62H2M5hw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"></iframe>
+						<!-- <iframe style="width: 100%; height: 100%; margin-top: -30px;" src="https://www.youtube.com/embed/m1a62H2M5hw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"></iframe> -->
 					</div>
 				</div>
 			</div>
@@ -110,14 +114,16 @@
 					<hr class="divide-sm">
 					<textarea name="desc-user" placeholder="Description"  oninvalid="this.setCustomValidity('Please Enter Valid Description')" oninput="setCustomValidity('')" required></textarea>
 					<hr class="divide-sm">
-					<div>
-						<!-- <div class="btn-sml button sand-back"><a href="#" class="font-roboto font-15 white">Kirim</a></div> -->
+					<div class="contact-button">
 						<input class="btn-sml button sand-back font-roboto white" type="submit" value="Kirim">
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
- <script type="text/javascript" src="script.js"></script>
+ <script type="text/javascript" src="main-script.js"></script>
+ <script type="text/javascript" src="get-api-youtube.js"></script>
+ <script type="text/javascript" src="get-api-reqres.js"></script>
+ <script type="text/javascript" src="https://apis.google.com/js/client.js?onload=onClientLoad" ></script>
 </body>
 </html>
