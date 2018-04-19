@@ -1,0 +1,74 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #ffffff;
+}
+
+
+/*Container StarWars*/
+.StarWars{
+	background-color: #f1f2f6;
+	text-align: center;
+	margin-left:5%;
+	margin-right:5%;
+	margin-top: 1%;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.StarWars img{
+    margin-top: 10px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+#inputID{
+	text-align: center;
+}
+
+
+.StarWars_Data table{
+	width: 50%;
+    margin-top: 10px;
+	text-align: center;
+}
+
+#name, #gender, #height, #mass, #birth{
+    width: 50%;
+	text-align: center;
+}
+
+
+
+
+/*Untuk Yang Yutub Gitu*/
+
+/*Container youtubs*/
+.Youtube{
+    background-color: #f1f2f6;
+    text-align: center;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top: 1%;
+    margin-bottom: 50px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Youtube img{
+    margin-right:5%;
+    margin-top: 10px;
+}
+
+#searchField{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#searchBtn{
+    margin-bottom: 10px;
+}
+
+#Youtube_Data{
+    margin-left:30px;
+    margin-right:30px;
+    margin-bottom: 15px;
+}

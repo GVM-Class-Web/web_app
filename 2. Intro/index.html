@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FE CLass</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="StarWars">
+        <!--<center><img src="./image/Otozone.png" width="30%"></center>-->
+        <center><img src="./image/star_wars.png" width="20%"></center>
+
+        <input type="text" id="inputID" placeholder="Input ID Data">
+        <button type="submit" id="submitBtn">Find Data</button>
+
+        <div class="StarWars_Data">
+            <center>
+            <table>
+                <tr>
+                    <th id="name" colspan="2"></th>
+                </tr>
+                <tr>
+                    <td id="gender"></td>
+                    <td id="height"></td>
+                </tr>
+                <tr>
+                    <td id="mass"></td>
+                    <td id="birth"></td>
+                </tr>
+                <tr>
+                    <td id="film" colspan="2"></td>
+                </tr>
+            </table>
+            </center>
+        </div>
+    </div>
+
+    <div class="Youtube">
+        <!--<center><img src="./image/Otozone.png" width="30%"></center>-->
+        <center><img src="./image/youtube-logo.png" width="20%"></center>
+
+        <input type="text" id="searchField" placeholder="Search Everything">
+        <button id="searchBtn" onclick="search()">Search</button>
+
+        <div id="Youtube_Data">
+
+        </div>
+    </div>
+
+
+
+    <script src="starwars.js"></script>
+    <script src="youtube.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+
+</body>
+</html>
