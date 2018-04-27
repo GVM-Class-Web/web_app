@@ -1,9 +1,9 @@
 // Call client APIs youtube
 function onClientLoad() {
-    gapi.client.load('youtube', 'v3', loadApi);
+    gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
 }
 // call client APIs youtube ApiKey
-function loadApi() {
+function onYouTubeApiLoad() {
     gapi.client.setApiKey('AIzaSyCfhLS283GXyOTtfwlZhLWBJsPuKjIOLvI');
 }
 // call when the searching

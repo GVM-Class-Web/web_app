@@ -21,12 +21,15 @@ window.onclick = function() {
 }
 /* looping when clicked area grid profile */
 for (let index = 0; index < clicked.length; index++) {
+  console.log(clicked.length);
   const element = clicked[index];
   element.onclick = showModal;
+  console.log("click");
 }
 /* function for show modal */
 function showModal(){
   modal.style.display = "block";
+  console.log("open");
 }
 
 
@@ -79,6 +82,6 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
